@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App</title>
+    <title>My Blog</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -38,14 +38,33 @@
             line-height: 1.6;
             color: #333;
         }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px; /* Добавляем отступ сверху для мобильных устройств */
+        }
+        .navbar-nav .nav-link {
+            padding: 10px 15px; /* Улучшаем отступы для ссылок в навигации */
+        }
+        .dropdown-menu {
+            margin-top: 5px; /* Улучшаем отступ для выпадающего меню */
+        }
     </style>
 </head>
 <body>
     {% block content %}
+    <!-- Навигационный бар -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <i class="fas fa-home"></i> My App
+                <i class="fas fa-home"></i> My Blog
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,27 +73,27 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
-                            <i class="fas fa-home"></i> Home
+                            <i class="fas fa-home"></i> Домой
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="fas fa-info-circle"></i> About
+                            <i class="fas fa-info-circle"></i> О нас
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-cog"></i> Settings
+                            <i class="fas fa-cog"></i> Настройки
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">
-                                <i class="fas fa-user"></i> Profile
+                                <i class="fas fa-user"></i> Профиль
                             </a></li>
                             <li><a class="dropdown-item" href="#">
-                                <i class="fas fa-cog"></i> Preferences
+                                <i class="fas fa-cog"></i> Опции
                             </a></li>
                             <li><a class="dropdown-item" href="#">
-                                <i class="fas fa-sign-out-alt"></i> Logout
+                                <i class="fas fa-sign-out-alt"></i> Выйти
                             </a></li>
                         </ul>
                     </li>
@@ -89,22 +108,98 @@
         </div>
     </nav>
 
+    <!-- Основной контент -->
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-8 offset-md-2 text-center">
+            <!-- Основная колонка с постами -->
+            <div class="col-md-8">
                 <!-- Заголовок -->
-                <h1 class="custom-header">Welcome to My App</h1>
-                <!-- Изображение -->
-                <img src="https://via.placeholder.com/600x400" alt="Sample Image" class="custom-img">
-                <!-- Параграф -->
-                <p class="custom-paragraph">
-                    This is a sample paragraph to demonstrate the content of the page. You can add more text here to provide additional information about your application or any other relevant details.
-                </p>
-                <!-- Кнопка -->
-                <button class="custom-btn">Click Me!</button>
+                <h1 class="custom-header">Добро пожаловать в My Blog</h1>
+
+                <!-- Пост 1 -->
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Как начать путешествовать с минимальным бюджетом</h2>
+                        <p class="card-text">Путешествия — это не роскошь, а образ жизни. Начните с малого, и вы поймете, что мир открыт для вас!</p>
+                        <a href="#" class="btn btn-primary">Читать пост</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Опубликовано 1 Января 2025 <a href="#">Автор</a>
+                    </div>
+                </div>
+
+                <!-- Пост 2 -->
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Топ-5 технологий, которые изменят нашу жизнь в 2024 году</h2>
+                        <p class="card-text">Будущее уже на пороге. Готовы ли вы к нему?</p>
+                        <a href="#" class="btn btn-primary">Читать пост</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Опубликовано 2 Января 2025 <a href="#">Автор</a>
+                    </div>
+                </div>
+
+                <!-- Пост 3 -->
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Почему здоровое питание — это проще, чем вы думаете</h2>
+                        <p class="card-text">Здоровое питание — это не диета, а образ жизни. Начните с малого, и вы увидите, как изменится ваше самочувствие и настроение!</p>
+                        <a href="#" class="btn btn-primary">Читать пост</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Опубликовано 3 Января 2025 <a href="#">Автор</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Боковая панель -->
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <!-- Категории -->
+                    <h4>Категории</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Технологии</li>
+                        <li class="list-group-item">Путешествия</li>
+                        <li class="list-group-item">Еда</li>
+                        <li class="list-group-item">Стиль жизни</li>
+                    </ul>
+
+                    <!-- Популярные посты -->
+                    <h4 class="mt-4">Популярные посты</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Заголовок Поста 1</li>
+                        <li class="list-group-item">Заголовок Поста 2</li>
+                        <li class="list-group-item">Заголовок Поста 3</li>
+                    </ul>
+
+                    <!-- Архив -->
+                    <h4 class="mt-4">Архив</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Январь 2025</li>
+                        <li class="list-group-item">Декабрь 2024</li>
+                        <li class="list-group-item">Ноябрь 2024</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 My Blog. All rights reserved.</p>
+            <p>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </p>
+        </div>
+    </footer>
     {% endblock %}
 
     <!-- Bootstrap JS and dependencies -->
