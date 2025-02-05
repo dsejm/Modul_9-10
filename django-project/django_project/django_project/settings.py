@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'catalog',
+    'imaginary_unit_test_easy',
+    'imaginary_unit_test_middle',
+    'imaginary_unit_test_hard',
 ]
 
 MIDDLEWARE = [

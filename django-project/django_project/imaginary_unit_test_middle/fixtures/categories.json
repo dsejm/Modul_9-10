@@ -1,0 +1,18 @@
+[
+    {
+        "model": "imaginary_unit_test_middle.category",
+        "pk": 1,
+        "fields": {
+            "name": "Электроника",
+            "description": "Техника и гаджеты"
+        }
+    },
+    {
+        "model": "imaginary_unit_test_middle.category",
+        "pk": 2,
+        "fields": {
+            "name": "Одежда",
+            "description": "Модная одежда"
+        }
+    }
+]
