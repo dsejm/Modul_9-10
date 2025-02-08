@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'imaginary_unit_test_easy',
     'imaginary_unit_test_middle',
     'imaginary_unit_test_hard',
+    'pagination',
 ]
 
 MIDDLEWARE = [

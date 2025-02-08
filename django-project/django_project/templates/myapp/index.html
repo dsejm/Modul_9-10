@@ -56,6 +56,16 @@
         .dropdown-menu {
             margin-top: 5px; /* Улучшаем отступ для выпадающего меню */
         }
+        .featured-buttons {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .featured-buttons .btn {
+            margin: 10px;
+            font-size: 18px;
+            padding: 15px 30px;
+        }
     </style>
 </head>
 <body>
@@ -121,10 +131,16 @@
                 <!-- Заголовок -->
                 <h1 class="custom-header">Добро пожаловать в My Blog</h1>
 
-                <!-- Кнопка-ссылка на страницу product_list.html -->
-                <div class="text-center mt-4">
-                    <a href="{% url 'product_list' %}" class="btn btn-primary">
-                        <i class="fas fa-list"></i> Перейти к списку продуктов
+                <!-- Кнопки для навигации -->
+                <div class="featured-buttons">
+                    <a href="http://127.0.0.1:8000/pagination/items" class="btn btn-primary">
+                        <i class="fas fa-list"></i> Список элементов
+                    </a>
+                    <a href="http://127.0.0.1:8000/pagination/contact/" class="btn btn-success">
+                        <i class="fas fa-envelope"></i> Контактная форма
+                    </a>
+                    <a href="http://127.0.0.1:8000/pagination/products" class="btn btn-warning">
+                        <i class="fas fa-box"></i> Список продуктов
                     </a>
                 </div>
 
